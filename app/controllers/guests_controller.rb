@@ -18,5 +18,11 @@ class GuestsController < ApplicationController
             {errors: guest.errors.full_messages}.to_json  
         end 
     end 
+
+    delete "/guests/:id" do 
+        guest = Guest.find(params[:id])
+        guest.destroy
+        guest.to_json
+    end 
     
 end 

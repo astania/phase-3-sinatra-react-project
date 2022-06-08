@@ -18,4 +18,10 @@ class RestaurantsController < ApplicationController
             {errors: restaurant.errors.full_messages}.to_json  
         end 
     end 
+
+    delete "/restaurants/:id" do 
+        restaurant = Restaurant.find(params[:id])
+        restaurant.destroy
+        restaurant.to_json
+    end 
 end 

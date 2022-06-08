@@ -18,5 +18,11 @@ class ReservationsController < ApplicationController
             {errors: reservation.errors.full_messages}.to_json  
         end 
     end 
+
+    delete "/reservations/:id" do 
+        reservation = Reservation.find(params[:id])
+        reservation.destroy
+        reservation.to_json
+    end 
     
 end 
