@@ -25,4 +25,9 @@ class GuestsController < ApplicationController
         guest.to_json
     end 
     
+    patch "/guests/:id" do 
+        guest = Guest.find(params[:id])
+        guest.update(params[:guest])
+        guest.to_json
+    end 
 end 

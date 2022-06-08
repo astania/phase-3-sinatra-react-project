@@ -24,4 +24,10 @@ class RestaurantsController < ApplicationController
         restaurant.destroy
         restaurant.to_json
     end 
+
+    patch "/restaurants/:id" do 
+        restaurant = Restaurant.find(params[:id])
+        restaurant.update(params[:restaurant])
+        restaurant.to_json
+    end 
 end 

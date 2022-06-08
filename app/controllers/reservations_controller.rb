@@ -24,5 +24,11 @@ class ReservationsController < ApplicationController
         reservation.destroy
         reservation.to_json
     end 
+
+    patch "/reservations/:id" do 
+        reservation = Reservation.find(params[:id])
+        reservation.update(params[:reservation])
+        reservation.to_json
+    end 
     
 end 
