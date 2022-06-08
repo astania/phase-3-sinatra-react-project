@@ -9,5 +9,5 @@ class Restaurant < ActiveRecord::Base
     validates :capacity, presence: true
 end 
 
-# restaurant.errors.full_messages
-# restaurant.errors.full_messages.to_sentence
+# restaurant3.errors.full_messages
+# restaurant3.errors.full_messages.to_sentence
