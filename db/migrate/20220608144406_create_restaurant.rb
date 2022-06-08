@@ -4,7 +4,7 @@ class CreateRestaurant < ActiveRecord::Migration[6.1]
       t.string :username 
       t.string :password
       t.string :restaurant_name 
-      t.string :type 
+      t.string :cuisine_type 
       t.string :image_url
       t.integer :capacity 
       t.timestamps 

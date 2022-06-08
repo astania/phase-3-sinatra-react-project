@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2022_06_08_150137) do
   create_table "guests", force: :cascade do |t|
     t.string "username"
     t.string "password"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -33,7 +34,7 @@ ActiveRecord::Schema.define(version: 2022_06_08_150137) do
     t.string "username"
     t.string "password"
     t.string "restaurant_name"
-    t.string "type"
+    t.string "cuisine_type"
     t.string "image_url"
     t.integer "capacity"
     t.datetime "created_at", precision: 6, null: false
