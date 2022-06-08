@@ -9,5 +9,14 @@ class GuestsController < ApplicationController
         guest = Guest.find(params[:id])
         guest.to_json
     end 
+
+    post "/guests" do 
+        guest = Guest.new(params[:guest])
+        if guest.save
+            guest.to_json
+        else
+            {errors: guest.errors.full_messages}.to_json  
+        end 
+    end 
     
 end 

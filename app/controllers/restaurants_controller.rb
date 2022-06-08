@@ -9,4 +9,13 @@ class RestaurantsController < ApplicationController
         restaurant = Restaurants.find(params[:id])
         restaurant.to_json
     end 
+
+    post "/restaurants" do 
+        restaurant = Restaurant.new(params[:restaurant])
+        if restaurant.save
+            restaurant.to_json
+        else
+            {errors: restaurant.errors.full_messages}.to_json  
+        end 
+    end 
 end 
