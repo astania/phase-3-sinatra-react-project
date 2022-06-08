@@ -12,4 +12,11 @@ end
 use Rack::JSONBodyParser
 
 # Our application
+
+# ApplicationController runs every time we make a request
 run ApplicationController
+# the "use" statements below allow the system to recognize the routes in each of the controllers below
+
+use RestaurantsController
+use GuestsController
+use ReservationsController
