@@ -1,35 +1,54 @@
 class RestaurantsController < ApplicationController
+  get "/restaurants" do
+    Restaurant.all.to_json(include: [reservations: { include: { guest: { only: [:name] } } }])
+  end
 
-    get "/restaurants" do 
-        restaurants = Restaurant.all
-        restaurants.to_json(include: [reservations: {include: { guest: { only: [:name ]}}}])
-    end 
+  get "/restaurants/:id" do
+    find_restaurant
 
-    get "/restaurants/:id" do 
-        restaurant = Restaurants.find(params[:id])
-        restaurant.to_json(include: [reservations: {include: { guest: { only: [:name ]}}}])
-    end 
+    if @restaurant
+      restaurant_to_json
+    else
+      { errors: "Record not found with id #{params[:id]}" }.to_json
+    end
+  end
 
-    post "/restaurants" do 
-        restaurant = Restaurant.new(params[:restaurant])
-        if restaurant.save
-            restaurant.to_json(include: [reservations: {include: { guest: { only: [:name ]}}}])
+  post "/restaurants" do
+    restaurant = Restaurant.new(params[:restaurant])
+    if restaurant.save
+      restaurant.to_json
+    else
+      { errors: restaurant.errors.full_messages }.to_json
+    end
+  end
 
-        else
-            {errors: restaurant.errors.full_messages}.to_json  
-        end 
-    end 
+  delete "/restaurants/:id" do
+    find_restaurant
+    if @restaurant&.destroy
+      { messages: "Record successfully destroyed" }.to_json
+    else
+      { errors: "Record not found with id #{params[:id]}" }
+    end
+  end
 
-    delete "/restaurants/:id" do 
-        restaurant = Restaurant.find(params[:id])
-        restaurant.destroy
-        restaurant.to_json(include: [reservations: {include: { guest: { only: [:name ]}}}])
+  patch "/restaurants/:id" do
+    find_restaurant
+    if @restaurant && @restaurant.update(params[:restaurant])
+      restaurant_to_json
+    elsif !@restaurant
+      { errors: "Record not found with id #{params[:id]}" }.to_json
+    else
+      { errors: @restaurant.errors.full_messages }.to_json
+    end
+  end
 
-    end 
+  private
 
-    patch "/restaurants/:id" do 
-        restaurant = Restaurant.find(params[:id])
-        restaurant.update(params[:restaurant])
-        restaurant.to_json(include: [reservations: {include: { guest: { only: [:name ]}}}])
-    end 
-end 
+  def find_restaurant
+    @restaurant = Restaurant.find_by_id(params[:id])
+  end
+
+  def restaurant_to_json
+    @restaurant.to_json(include: [reservations: { include: { guest: { only: [:name] } } }])
+  end
+end

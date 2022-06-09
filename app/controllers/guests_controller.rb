@@ -1,33 +1,55 @@
 class GuestsController < ApplicationController
-    
-    get "/guests" do 
-        guests = Guest.all
-        guests.to_json(include: [reservations: {include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url ]}}}])
-    end 
+  get "/guests" do
+    Guest.all.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
+  end
 
-    get "/guests/:id" do 
-        guest = Guest.find(params[:id])
-        guest.to_json(include: [reservations: {include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url ]}}}])
-    end 
+  get "/guests/:id" do
+    find_guest
 
-    post "/guests" do 
-        guest = Guest.new(params[:guest])
-        if guest.save
-            guest.to_json(include: [reservations: {include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url ]}}}])
-        else
-            {errors: guest.errors.full_messages}.to_json  
-        end 
-    end 
+    if @guest
+      guest_to_json
+    else
+      { errors: "Record not found with id #{params[:id]}" }.to_json
+    end
+  end
 
-    delete "/guests/:id" do 
-        guest = Guest.find(params[:id])
-        guest.destroy
-        guest.to_json
-    end 
-    
-    patch "/guests/:id" do 
-        guest = Guest.find(params[:id])
-        guest.update(params[:guest])
-        guest.to_json(include: [reservations: {include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url ]}}}])
-    end 
-end 
+  post "/guests" do
+    guest = Guest.new(params[:guest])
+    if guest.save
+      guest.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
+    else
+      { errors: guest.errors.full_messages }.to_json
+    end
+  end
+
+  delete "/guests/:id" do
+    find_guest
+
+    if @guest&.destroy
+      { messages: "Record successfully destroyed" }.to_json
+    else
+      { errors: "Record not found with id #{params[:id]}" }
+    end
+  end
+
+  patch "/guests/:id" do
+    find_guest
+    if @guest && @guest.update(params[:guest])
+      guest_to_json
+    elsif !@guest
+      { errors: "Record not found with id #{params[:id]}" }.to_json
+    else
+      { errors: @restaurant.errors.full_messages }.to_json
+    end
+  end
+
+  private
+
+  def find_guest
+    @guest = Guest.find(params[:id])
+  end
+
+  def guest_to_json
+    @guest.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
+  end
+end
