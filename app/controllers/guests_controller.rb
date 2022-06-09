@@ -9,7 +9,7 @@ class GuestsController < ApplicationController
     if @guest
       guest_to_json
     else
-      { errors: "Record not found with id #{params[:id]}" }.to_json
+        { errors: "Record not found with id #{params[:id]}" }.to_json
     end
   end
 
@@ -46,10 +46,18 @@ class GuestsController < ApplicationController
   private
 
   def find_guest
-    @guest = Guest.find(params[:id])
+    @guest = Guest.find_by_id(params[:id])
   end
 
   def guest_to_json
     @guest.to_json(include: [reservations: { include: { restaurant: { only: [:id, :restaurant_name, :cuisine_type, :image_url] } } }])
   end
 end
+
+# {
+#     "guest": {
+#         "username": "test",
+#         "password": "test",
+#         "name": "test"
+#     }
+# }

@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
     if @reservation
       reservation_to_json
     else
-      { errors: "Record not found with id #{params[:id]}" }
+        { errors: "Record not found with id #{params[:id]}" }.to_json
     end
   end
 

@@ -52,3 +52,14 @@ class RestaurantsController < ApplicationController
     @restaurant.to_json(include: [reservations: { include: { guest: { only: [:name] } } }])
   end
 end
+
+# {
+#   "restaurant": {
+#       "username": "test",
+#       "password": "test",
+#       "restaurant_name": "test",
+#       "cuisine_type": "test",
+#       "image_url": "google.com",
+#       "capacity": 10
+#   }
+# }
