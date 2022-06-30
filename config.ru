@@ -20,3 +20,5 @@ run ApplicationController
 use RestaurantsController
 use GuestsController
 use ReservationsController
+
+run ApplicationController
