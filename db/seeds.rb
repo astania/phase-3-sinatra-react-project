@@ -2,7 +2,7 @@ puts "🌱 Seeding spices..."
 
 # Seed your database here
 
-50.times do 
+10.times do 
     Guest.create(
         username: Faker::Kpop.girl_groups,
         password: Faker::Kpop.solo,
@@ -12,7 +12,7 @@ end
 
 images = ["https://i.picsum.photos/id/308/500/500.jpg?hmac=4Rp8DnIaA2wvmDlz3SzUZEfcMNWSfvN5vPDiTfSDfOY", "https://i.picsum.photos/id/376/500/500.jpg?hmac=T32nkxwsxIyVf_KzAw9mqHfcl36epPedy9QORnJGoTM", "https://i.picsum.photos/id/254/500/500.jpg?hmac=8sFZjLHnHZ_ttdAXWqiL4Seejwf4vOFarsBeQGJZkpU", "https://i.picsum.photos/id/171/500/500.jpg?hmac=MCXIAr8YFm04Dt5GrbpOYzwu_60yAoQ-SIAZIRZU-So", "https://i.picsum.photos/id/395/500/500.jpg?hmac=sDyOxcZuKzogaz3HcaBSf2NZAUQNkkSyMLWx5n_31rM", "https://i.picsum.photos/id/630/500/500.jpg?hmac=_e8WfDqIZfqQ0doa8XEoc4JEw2SQq2ud7QplFmfS6Ag", "https://i.picsum.photos/id/851/500/500.jpg?hmac=8qtjAOEbbDU4dZvNe0SQ5dAk0iv-zHze-29LZq1Amno", "https://i.picsum.photos/id/426/500/500.jpg?hmac=3O4ddwHib-SYk3OFHmK7UiTJIakIsl08MPUoFwGRcoM", "https://i.picsum.photos/id/281/500/500.jpg?hmac=Pk0JvyTj1ELJUbpDPNK6zC8fOgGCo_WXluHIufZO_4s", "https://i.picsum.photos/id/1062/500/500.jpg?hmac=kHOfZuXyrJW6ZJIn9zWKezvuyLPxht6mpcwmRyNChvU", "https://i.picsum.photos/id/347/500/500.jpg?hmac=-j1wmqVvelk-WwFb-vkIE9iRr4mER4iHngc1kXQNWWU", "https://i.picsum.photos/id/552/500/500.jpg?hmac=xhz_UnakbIYc1wvTaAxKJt7MvTl3ykIrcPX9PEfFwN8", "https://i.picsum.photos/id/428/500/500.jpg?hmac=PNPaSXZc0Jrnf2jmGPFh9skpsE5srKJTBGF9vXhJdvs", "https://i.picsum.photos/id/56/500/500.jpg?hmac=0DvH8xze786PUiirUhg47De5_919CfAWh4DPNszzPQg", "https://i.picsum.photos/id/473/500/500.jpg?hmac=P__oi_XX4pWMJPlt1IJOqvsPEG7FT4-xQ6Msu55c2io", "https://i.picsum.photos/id/361/500/500.jpg?hmac=FfNKBFx3Z0iruweM00k67IEaYPjvkZFhOTSl3MWSH9I", "https://i.picsum.photos/id/922/500/500.jpg?hmac=as7OAm-ZjDbrn3-nnuweHDrDDqKCOIMDQtyL99NNDhk", "https://i.picsum.photos/id/274/500/500.jpg?hmac=GU1hXd9O1g6VUsMmhW3U9Rpd5LWc1hZjs8-n6JV_yI4", "https://i.picsum.photos/id/884/500/500.jpg?hmac=IviKntbKgmD9S_rfCKPNXN_DEojYj6QUOE3L-eGsRH0", "https://i.picsum.photos/id/994/500/500.jpg?hmac=ZrfJWqVKx5MYAH42dVs099DACcOQF3a3-SFXjOhtcMk", "https://i.picsum.photos/id/909/500/500.jpg?hmac=jfS9jLCYVgHM_3hZgM2DtS5ukZ0M8Juan_rku8N4OEE", "https://i.picsum.photos/id/197/500/500.jpg?hmac=Wkybe1s_1ui7V5n9qGWOWyK3PCpCinm8wocgS4T4YF4", "https://i.picsum.photos/id/955/500/500.jpg?hmac=z5G1Rp9KWbQ6DQT1S7yC60_teIQuM50ckiuxRVQaFYQ", "https://i.picsum.photos/id/398/500/500.jpg?hmac=Uz9jAqx6NJza9-FM-mGl8N6eAvbfGnajh3wQA0Iml7U", "https://i.picsum.photos/id/434/500/500.jpg?hmac=FPqmawt8p20vxeYkoiBbWG1qVXM5vlSKIRwqu06IYrk"]
 
-20.times do 
+10.times do 
     Restaurant.create(
         username: Faker::Kpop.boy_bands,
         password: Faker::Kpop.solo,
