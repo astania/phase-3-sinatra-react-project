@@ -55,13 +55,13 @@ end
 
 # data format:
 # {
-#     "reservation": {
+    # "reservation": {
 
-#         "date": "2022-06-09",
-#         "time": "2000-01-01T05:30:00.000Z",
-#         "number_of_guests": 3,
-#         "restaurant_id": 17,
-#         "guest_id": 45
+    #     "date": "2022-06-09",
+    #     "time": "2000-01-01T05:30:00.000Z",
+    #     "number_of_guests": 3,
+    #     "restaurant_id": 17,
+    #     "guest_id": 45
 
-#     }
+    # }
 # }
