@@ -10,7 +10,27 @@ puts "🌱 Seeding spices..."
     )
 end 
 
-images = ["https://i.picsum.photos/id/308/500/500.jpg?hmac=4Rp8DnIaA2wvmDlz3SzUZEfcMNWSfvN5vPDiTfSDfOY", "https://i.picsum.photos/id/376/500/500.jpg?hmac=T32nkxwsxIyVf_KzAw9mqHfcl36epPedy9QORnJGoTM", "https://i.picsum.photos/id/254/500/500.jpg?hmac=8sFZjLHnHZ_ttdAXWqiL4Seejwf4vOFarsBeQGJZkpU", "https://i.picsum.photos/id/171/500/500.jpg?hmac=MCXIAr8YFm04Dt5GrbpOYzwu_60yAoQ-SIAZIRZU-So", "https://i.picsum.photos/id/395/500/500.jpg?hmac=sDyOxcZuKzogaz3HcaBSf2NZAUQNkkSyMLWx5n_31rM", "https://i.picsum.photos/id/630/500/500.jpg?hmac=_e8WfDqIZfqQ0doa8XEoc4JEw2SQq2ud7QplFmfS6Ag", "https://i.picsum.photos/id/851/500/500.jpg?hmac=8qtjAOEbbDU4dZvNe0SQ5dAk0iv-zHze-29LZq1Amno", "https://i.picsum.photos/id/426/500/500.jpg?hmac=3O4ddwHib-SYk3OFHmK7UiTJIakIsl08MPUoFwGRcoM", "https://i.picsum.photos/id/281/500/500.jpg?hmac=Pk0JvyTj1ELJUbpDPNK6zC8fOgGCo_WXluHIufZO_4s", "https://i.picsum.photos/id/1062/500/500.jpg?hmac=kHOfZuXyrJW6ZJIn9zWKezvuyLPxht6mpcwmRyNChvU", "https://i.picsum.photos/id/347/500/500.jpg?hmac=-j1wmqVvelk-WwFb-vkIE9iRr4mER4iHngc1kXQNWWU", "https://i.picsum.photos/id/552/500/500.jpg?hmac=xhz_UnakbIYc1wvTaAxKJt7MvTl3ykIrcPX9PEfFwN8", "https://i.picsum.photos/id/428/500/500.jpg?hmac=PNPaSXZc0Jrnf2jmGPFh9skpsE5srKJTBGF9vXhJdvs", "https://i.picsum.photos/id/56/500/500.jpg?hmac=0DvH8xze786PUiirUhg47De5_919CfAWh4DPNszzPQg", "https://i.picsum.photos/id/473/500/500.jpg?hmac=P__oi_XX4pWMJPlt1IJOqvsPEG7FT4-xQ6Msu55c2io", "https://i.picsum.photos/id/361/500/500.jpg?hmac=FfNKBFx3Z0iruweM00k67IEaYPjvkZFhOTSl3MWSH9I", "https://i.picsum.photos/id/922/500/500.jpg?hmac=as7OAm-ZjDbrn3-nnuweHDrDDqKCOIMDQtyL99NNDhk", "https://i.picsum.photos/id/274/500/500.jpg?hmac=GU1hXd9O1g6VUsMmhW3U9Rpd5LWc1hZjs8-n6JV_yI4", "https://i.picsum.photos/id/884/500/500.jpg?hmac=IviKntbKgmD9S_rfCKPNXN_DEojYj6QUOE3L-eGsRH0", "https://i.picsum.photos/id/994/500/500.jpg?hmac=ZrfJWqVKx5MYAH42dVs099DACcOQF3a3-SFXjOhtcMk", "https://i.picsum.photos/id/909/500/500.jpg?hmac=jfS9jLCYVgHM_3hZgM2DtS5ukZ0M8Juan_rku8N4OEE", "https://i.picsum.photos/id/197/500/500.jpg?hmac=Wkybe1s_1ui7V5n9qGWOWyK3PCpCinm8wocgS4T4YF4", "https://i.picsum.photos/id/955/500/500.jpg?hmac=z5G1Rp9KWbQ6DQT1S7yC60_teIQuM50ckiuxRVQaFYQ", "https://i.picsum.photos/id/398/500/500.jpg?hmac=Uz9jAqx6NJza9-FM-mGl8N6eAvbfGnajh3wQA0Iml7U", "https://i.picsum.photos/id/434/500/500.jpg?hmac=FPqmawt8p20vxeYkoiBbWG1qVXM5vlSKIRwqu06IYrk"]
+images = ["https://pixabay.com/get/g63f9d2f26756c7431aac98cfdff42770be706b9a0ca9c3b583d56a8902f461bdd1bed36f87e86afe772812a81882995f_1280.jpg", 
+    "https://pixabay.com/get/gbdcba47e09e7163feaef3637b4dea3b4c1809115f1c25a37b4d13bf27faa9b49c112e01cc3752245283b64c2a8501c0a_1280.jpg", 
+    "https://pixabay.com/get/g54b8536713b8ed077c0dc78fb0932659d9810904bfbd261f2cc64735be64c0fb8e42bbe828cf18d1bba2e7866915f2e3_1280.jpg", 
+    "https://pixabay.com/get/gb14741da07f98cec5cbbb38f61a6a979993403bab932d603358761f41d44271eab70c7f38380af6584de1fde398ecf71_1280.jpg", 
+    "https://pixabay.com/get/g9475d1b583dfd52cbb4be809226440ef1906d6de8ee64beabe5f533c3db1be2ef296c1779d9910c568357e3ff43a6652_1280.jpg", 
+    "https://pixabay.com/get/g89f813a9304dcdfd809a4cee7efad9593dde8c9c962f02666bbf7f94a9755e11992b42ade53cafcfd20926daee979c33_1280.jpg", 
+    "https://pixabay.com/get/g3df0409c108233b841f028a215c0779e8b72cfb7a4c7066b60c6fb984176e6cca2b750ded0f220a6780f69c7b1c7057f_1280.jpg", 
+    "https://pixabay.com/get/g4d06005b45f57ce31b7ef9a605b28ab0abb78520cd694276add54e1ab088bbefae59477e942341f159c21112838dc22b_1280.jpg", 
+    "https://pixabay.com/get/gb07648448ef1953b3cee33618b0844601e284c5790563abbee5561426a8b12e1748fe39e0d33b5c48920e7349a75b828_1280.jpg", 
+    "https://pixabay.com/get/gc48a919ac7eb0f6809b4864dfd88bc5d6fd0cd5ff0ff89f93203ead91e30e6b1893cb07126d0db3e7f7802c26e8bb358_1280.jpg", 
+    "https://pixabay.com/get/gc87ff1b5f5afd7c668705515c59156338b91ca52ede50625f18d8669852edd9ff47897029cbdd93bd4a76a49972871f0_1280.jpg", 
+    "https://pixabay.com/get/g97b03a94644f9e168d7faa25e503502f15554177e1c2c7ce76729a1e4ecd0d11b7b2bcda4841b7911317d17865b03e88_1280.jpg", 
+    "https://pixabay.com/get/g305f44cb58f7df06591067cbe2d13c112a661c8f50c438bf3d80e1a61e6acaf980e600212d1a544953265064fdfa7afd_1280.png", 
+    "https://pixabay.com/get/g28b604df3ab934f6ab0782df28ab92cafbeadd8310279c48711fcc12dfc25cfd23eaa88097adc1f03ffff79b72f3e4aa_1280.jpg", 
+    "https://pixabay.com/get/ge503b17659fe6e4fbef89cffe09b199dcb9d61b52c89c57c0fa73cbd513fa4d26d51dfc389fb661bf980c3e78367dd8e_1280.jpg",  
+    "https://pixabay.com/get/gcf8b974df5e34857a88ec2657b2995f07219d39e6823dd87233c1bb1ec965b3e0ae79204efcfbab62b3d8b51302f5156_1280.jpg", 
+    "https://pixabay.com/get/gc29f386fbd8f0321b7232256c2dbc693f6dfce0d71077fe98fe374c07f56149ff16d18c25e22d1e0ecc065a0be9ad967_1280.jpg", 
+    "https://pixabay.com/get/g6227e36d042c5401342710ab871622170e54573910e15d62079ebab668c8c1b4df2595d027030c60ead5fad19d3537b8_1280.jpg", 
+    "https://pixabay.com/get/gfe1b76dfa178624ce6ed1249a122747d2ea52009385ff38a01960c4e662b34fccf0a8f9bb4a76a06513eb0f6dd28436c_1280.jpg", 
+    "https://pixabay.com/get/gaf55bd71b47a9b572914d70ac08dcc04c1e9fb785cfd2b5a820f1ea261880376b4032c93584f558e0ef54a0092421bd8_1280.jpg"    
+]
 
 10.times do 
     Restaurant.create(
@@ -18,7 +38,7 @@ images = ["https://i.picsum.photos/id/308/500/500.jpg?hmac=4Rp8DnIaA2wvmDlz3SzUZ
         password: Faker::Kpop.solo,
         restaurant_name: Faker::Restaurant.name,
         cuisine_type: Faker::Restaurant.type,
-        image_url: images[rand(0..24)],
+        image_url: images[rand(0..19)],
         capacity: rand(10..50)
     )
 
