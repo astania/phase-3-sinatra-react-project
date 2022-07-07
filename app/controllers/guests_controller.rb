@@ -9,7 +9,7 @@ class GuestsController < ApplicationController
     if @guest
       guest_to_json
     else
-        { errors: "Record not found with id #{params[:id]}" }.to_json
+      { errors: "Record not found with id #{params[:id]}" }.to_json
     end
   end
 
@@ -54,10 +54,3 @@ class GuestsController < ApplicationController
   end
 end
 
-# {
-#     "guest": {
-#         "username": "test",
-#         "password": "test",
-#         "name": "test"
-#     }
-# }
