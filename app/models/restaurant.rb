@@ -6,8 +6,4 @@ class Restaurant < ActiveRecord::Base
     validates :password, presence: true 
     validates :restaurant_name, presence: true, uniqueness: true
     validates :cuisine_type, presence: true
-    validates :capacity, presence: true
 end 
-
-# restaurant3.errors.full_messages
-# restaurant3.errors.full_messages.to_sentence
