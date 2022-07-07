@@ -27,6 +27,9 @@ This is a demo app, so while you can create new users and switch between them, t
 
 To create a user, you can fill in the form on the front page and click "create account". This will automatically log you in as that user. You can navigate to the restaurants tab and click "make a reservation". Enter the appropriate information into the form that appears and then click "make a reservation". Your reservation will then be available in the "My Reservations" tab. You can delete any reservation, or edit them by clicking the "edit reservation" button. To log out, go to the "Profile" tab and click "log out". You can then add a new user, or log in as any existing user. 
 
+## Associations
+There are three tables in this project: guests, restaurants, and reservations. Guests and restaurants have a many-to-many relationship through reservations. 
+
 ### Licensing
 Copyright (c) 2022 Anna Stania
 
